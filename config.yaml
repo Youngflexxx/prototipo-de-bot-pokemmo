@@ -1,0 +1,53 @@
+# PokéMMO Bot Configuration
+# Edit this file to customize bot behavior.
+
+# Battle settings
+attack_slot: 3          # 1: TopLeft, 2: TopRight, 3: BottomLeft, 4: BottomRight
+pp_max: 25              # Max PP for your chosen attack
+vision_confidence: 0.8  # Template matching confidence (0.0-1.0)
+combat_timeout: 15      # Max iterations waiting for next turn
+
+# Key bindings (PokéMMO defaults)
+keys:
+  action: "z"
+  cancel: "x"
+  up: "up"
+  down: "down"
+  left: "left"
+  right: "right"
+
+# Anti-detection settings
+anti_detect:
+  # Pause timing (seconds) - base range
+  min_pause: 0.3
+  max_pause: 1.2
+
+  # Gaussian timing parameters (higher = more human-like variance)
+  timing_stddev: 0.15
+
+  # Movement timing (seconds)
+  move_min: 0.4
+  move_max: 0.9
+
+  # Micro-movement chance (fidgeting)
+  micro_move_chance: 0.15
+
+  # AFK pause chance per combat round (simulates checking phone, etc.)
+  afk_chance: 0.08
+  afk_min: 2.0
+  afk_max: 6.0
+
+  # Hesitation before attacking
+  hesitation_chance: 0.12
+  hesitation_min: 0.3
+  hesitation_max: 0.8
+
+  # Extra cancel presses to skip dialog
+  extra_cancels_min: 1
+  extra_cancels_max: 4
+
+  # Confidence jitter for vision detection
+  confidence_jitter: 0.05
+
+  # Max consecutive same-direction walks before forcing direction change
+  max_consecutive_walks: 5
