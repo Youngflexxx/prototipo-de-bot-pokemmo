@@ -33,6 +33,11 @@ env/
 *.swo
 *~
 
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
 # OS
 Thumbs.db
 ehthumbs.db
